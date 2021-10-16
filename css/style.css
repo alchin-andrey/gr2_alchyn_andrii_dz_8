@@ -173,7 +173,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-roof__enter {
-    /* min-width: 245px; */
     height: 60px;
     background: linear-gradient(0deg, #00A87C, #00A87C), linear-gradient(180deg, #EBECF0 0%, rgba(235, 236, 240, 0) 100%);
     border: 2px solid #00A87C;
@@ -189,8 +188,21 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-.header-roof__enter span {
+.header-roof__enter div {
     padding-left: 62px;
+    text-align: center;
+}
+
+@media (max-width: 726px) {
+    .header-roof__enter div {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .header-roof__enter div {
+        display: initial;
+    }
 }
 
 .header-roof__enter::before {
@@ -200,14 +212,41 @@ h1, h2, h3, h4, h5, h6 {
     top: 18px;
 }
 
+@media (max-width: 726px) {
+    .header-roof__enter::before {
+        left: 38%;
+        top: 33%;
+    }
+}
+
+@media (max-width: 575px) {
+    .header-roof__enter::before {
+        left: 22px;
+        top: 18px;
+    }
+}
+
 .header-roof__enter::after {
     content: url(../img/icon/svg/header_enter_arrow.svg);
     position: absolute;
     right: 20px;
 }
 
+@media (max-width: 900px) {
+    .header-roof__enter::after {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .header-roof__enter::after {
+        display: initial;
+    }
+}
+
 .header-roof__enter:hover {
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+    color: white;
 }
 
 /*________header-floor_______*/
@@ -224,7 +263,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 991px) {
     .header-floor__back {
-        background:none
+        background: none
     }
 }
 
@@ -349,6 +388,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-floor__btm:hover {
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+    color: white;
 }
 
 .header-floor__img img {
